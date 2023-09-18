@@ -74,7 +74,7 @@ def e4_module_func(arg_train_prec, arg_file_name, arg_model_type, show_plots=Tru
         model = SVC();
     else:
         print("Error: unsupported model_type " + model_type)
-        return -1;
+        return -1,-1;
     
     print("Using " + model_type)
     
@@ -87,7 +87,7 @@ def e4_module_func(arg_train_prec, arg_file_name, arg_model_type, show_plots=Tru
     print("Accuracy of prediction in training" , acc_train)
     print("Accuracy of prediction in testing" , acc_test)
     if show_plots == False:
-        return acc_test
+        return acc_test, acc_train
     
     #Confusion matrix generation
     y_pred = model.predict(x_test)
@@ -107,4 +107,4 @@ def e4_module_func(arg_train_prec, arg_file_name, arg_model_type, show_plots=Tru
     plt.text(0.5,6, info_text, fontsize=12, ha="center")
     plt.show()
     
-    return acc_test
+    return acc_test, acc_train
