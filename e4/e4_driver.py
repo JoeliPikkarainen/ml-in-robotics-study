@@ -20,7 +20,7 @@ def get_avg(rounds,prec,name,model):
         total_train += result_train
 
     average_test = total_test / rounds
-    acerage_train = total_test / rounds
+    acerage_train = total_train / rounds
     return average_test,acerage_train
 
 lin_reg = mf(0.2,"fruit_data.csv",mt[0],show_plots=True)
