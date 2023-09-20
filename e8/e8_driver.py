@@ -24,7 +24,4 @@ data2 = [
     
 ]
 
-pred1 = predict_liner_regression(data2, [5.0,6.0,7.0,8.0])
-
-
-print("done")
+pred2 = predict_liner_regression(data2, [5.0,6.0,7.0,8.0])
