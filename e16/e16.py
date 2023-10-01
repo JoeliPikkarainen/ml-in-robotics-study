@@ -135,7 +135,8 @@ if __name__ == "__main__":
             #Gradually punish for slow speed, this:
             # 1. Gets the car to move faster at start when its stationary
             # 2. Minimizes the times when its stationary at both top ends, meaning longer
-            # drive time from side to side, for that more velocity is needed
+            # drive time from side to side, for that more velocity is needed and
+            # also faster "turning" after speed ends at top end
             
             if(abs(speed) < 0.001):
                 reward -= 4
